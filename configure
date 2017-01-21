@@ -9,10 +9,11 @@ echo "Starting resiliosync"
 
 key=$(cat .key)
 echo -e "\nIf you need to run sync daemon manually, you should use: './rsstart'\n"
-echo -e "1. In opened page, use this name '${green}computer_$mac${nocolor}'"
+echo -e "0. In opened page, input name and pass, by default ask me for it"
+echo -e "1. After that, use this name '${green}computer_$mac${nocolor}'"
 echo -e "2. Apply two check box -> Get started"
 echo -e "3. Copy this key '${green}$key${nocolor}', then press ctrl+U, paste it"
 echo -e "4. Next, select 'Virtualbox VMs'"
 echo -e "5. You're awesome"
 
-firefox "127.0.0.1:8888"
+firefox "127.0.0.1:8888" >/dev/null 2>&1 &

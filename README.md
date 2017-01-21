@@ -10,3 +10,7 @@
  - For server do 1 and 2 step, then add folder, and paste key in file '.key'
  - For client do all steps :] 
  - After configuration, daemon will start. But if you need to run it manually use 'rsstart'
+
+## Want to change passwd?
+ - openssl passwd -1 -salt saltysalt veryverylongandsafePa$$
+ - paste in .base_conf
