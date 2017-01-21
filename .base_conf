@@ -1,0 +1,17 @@
+{
+   "device_name": "changeme",
+// "listening_port" : 0, // 0 - randomize port
+  "use_upnp" : true,
+  "download_limit" : 0,
+  "upload_limit" : 0,
+  "directory_root" : "/home/student/",
+  "directory_root_policy" : "belowroot",
+
+  "webui" :
+  {
+    "listen" : "0.0.0.0:8888"
+   ,"login" : "admin"
+   ,"password_hash" : "$1$cybersec$fbwsb9fa5Fk3q4k1il4Nc1" 
+   ,"allow_empty_password" : false 
+  }
+}

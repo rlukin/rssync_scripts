@@ -1,0 +1,16 @@
+#! /bin/bash
+
+mac=$(ifconfig | grep ether | awk '{print $2}' | sed 's/://g')
+sed  "s:changeme:computer_$mac:" .base_conf > .rsconf
+echo "Starting resiliosync"
+./rsstart || return 1
+
+key=$(cat .key)
+echo "If you need to run sync daemon manually, you should use: './rsstart'"
+echo "1. In opened page, use this name \'computer_$mac\'"
+echo "2. Apply two check box -> Get started"
+echo "3. Copy this key '$key', then press ctrl+U, paste it"
+echo "4. Next, select 'Virtualbox VMs'"
+echo "5. You're awesome"
+
+firefox "127.0.0.1:8888"
